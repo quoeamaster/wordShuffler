@@ -78,7 +78,26 @@ func (s *Shuffler) ShuffleText(oldText... string) (string, error) {
 }
 
 func gramsBreaking(text string) ([]string, error) {
-    grams := strings.Split(text, " ")
+    // grams := strings.Split(text, " ") // no regular expression supported...
+    grams := make([]string, 1)
+    currentCharArray := make([]rune, 1)
+    charArray := []rune(text)
+
+    for _, charInRune := range charArray {
+        switch charInRune {
+        // 32 = space, 10 = line break
+        case 32, 10:
+            grams = append(grams, string(currentCharArray))
+            // sort of reset
+            currentCharArray = currentCharArray[:0]
+        default:
+            currentCharArray = append(currentCharArray, charInRune)
+        }
+    }
+    // handling for the last word (if any)
+    if len(currentCharArray) > 0 {
+        grams = append(grams, string(currentCharArray))
+    }
     return grams, nil
 }
 

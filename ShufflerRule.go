@@ -2,7 +2,9 @@ package wordShuffler
 
 import (
     "fmt"
-    "strconv"
+    "strings"
+    "math/rand"
+    "time"
 )
 
 // interface encapsulating shuffling rules
@@ -18,26 +20,71 @@ func (r *CambridgeRule) Shuffle(oldText string) (string, error) {
     // TODO: investigate stringBuffer
     newText := ""
 
+    if len(strings.TrimSpace(oldText)) == 0 {
+        return "", nil
+    }
     runes := []rune(oldText)
-    for idx, char := range runes {
-        // to convert rune to character/string => strconv.QuoteRune(rune_val)
-        // fmt.Println(fmt.Sprintf("runes at idx (%v) => %v -- actual char : %v", idx, char, strconv.QuoteRune(char)))
-        
+    // to convert rune to character/string => strconv.QuoteRune(rune_val)
+    idxFirstAlphanumeric := getFirstAlphanumericChar(runes)
+    idxLastAlphanumeric := getLastAlphanumericChar(runes)
+    if idxLastAlphanumeric == -1 || idxLastAlphanumeric == -1 {
+        return "", fmt.Errorf("the word provided doen't contain any alphanumeric characters [%v]", oldText)
     }
     /*
-    for idx := 0; idx < len(oldText); idx++ {
-        char := oldText[idx: idx+1]
-        shouldIgnore, err := isCharacterIgnorable(char)
-        if err != nil {
-            return "", err
-        }
-        fmt.Println(idx, " => ", char, ", can ignore? ", shouldIgnore)
-        // TODO: build the newText
-    } // end -- for (character extraction of oldText)
+    fmt.Println("first char @", idxFirstAlphanumeric,
+        " last char @", idxLastAlphanumeric,
+        " actual word => ", oldText,
+        " first char => ", strconv.QuoteRune(runes[idxFirstAlphanumeric]),
+        " last char => ", strconv.QuoteRune(runes[idxLastAlphanumeric]))
     */
+    fmt.Println("**", oldText)
+    generateRandomCharSequence(idxFirstAlphanumeric, idxLastAlphanumeric, oldText)
+
     return newText, nil
 }
 
+
+// helper method to get back the first index of an alphanumeric character
+func getFirstAlphanumericChar(charArray []rune) int {
+    for idx, char := range charArray {
+        // alphanumeric check
+        if (char >= 65 && char <= 90) || (char >= 97 && char <= 122) || (char >= 48 && char <= 57) {
+            return idx
+        }
+    }   // loop through the runes of the charArray
+    return -1
+}
+// helper method to get back the last index of an alphanumeric character
+func getLastAlphanumericChar(charArray []rune) int {
+    runeLen := len(charArray) - 1
+    for idx := runeLen; idx >= 0; idx-- {
+        char := charArray[idx]
+        if (char >= 65 && char <= 90) || (char >= 97 && char <= 122) || (char >= 48 && char <= 57) {
+            return idx
+        }
+    }
+    return -1
+}
+
+func generateRandomCharSequence(idxFirst, idxLast int, oldText string) string {
+    if len(oldText) >= 0 && len(oldText) <= 3 {
+        return oldText
+    }
+    innerString := oldText[(idxFirst + 1): idxLast]
+    charArray := []rune(innerString)
+    destCharArray := make([]rune, len(charArray))
+    // generate randomizer
+    rGenerator := rand.New(rand.NewSource(time.Now().UnixNano()))
+
+    for idx, charInRune := range charArray {
+        // get a random idx for the current rune
+        // the new idx can't be the same as the original idx
+        // check if the new idx already occupied or not
+        
+    }
+
+    return oldText
+}
 
 func isCharacterIgnorable(char string) (bool, error) {
     isIgnorable := false
@@ -45,9 +92,6 @@ func isCharacterIgnorable(char string) (bool, error) {
     if len(char) != 1 {
         return false, fmt.Errorf("char MUST be of length of 1")
     }
-
-
-
     /*
     switch char {
     case "\"", "'", ",", "!", ".", " ", "\n", "\r", "“", "”":
