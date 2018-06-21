@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd594097-3e79-4926-ba42-3ff854ab3d21" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shuffler.go" beforeDir="false" afterPath="$PROJECT_DIR$/Shuffler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShufflerRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/ShufflerRule.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/Shuffling/readings_01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/readings_01.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +20,8 @@
       <file leaf-file-name="readings_01.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/Shuffling/readings_01.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="90">
+              <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -27,17 +29,17 @@
       <file leaf-file-name="Shuffling.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+            <state relative-caret-position="285">
+              <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shuffling_test.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Shuffling_test.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="430">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
               <folding>
                 <element signature="e#19#80#0" expanded="true" />
               </folding>
@@ -48,8 +50,8 @@
       <file leaf-file-name="Shuffler.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shuffler.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="94" column="9" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+            <state relative-caret-position="429">
+              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
               <folding>
                 <element signature="e#22#56#0" expanded="true" />
               </folding>
@@ -57,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShufflerRule.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShufflerRule.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShufflerRule.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+            <state relative-caret-position="297">
+              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
               <folding>
                 <element signature="e#22#56#0" expanded="true" />
                 <element signature="n#!!block;n#getFirstAlphanumericChar#0" />
@@ -83,6 +85,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>said</find>
+      <find>**</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
@@ -92,12 +95,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" />
         <option value="$PROJECT_DIR$/IOUtil.go" />
-        <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" />
         <option value="$PROJECT_DIR$/test/features/Shuffling/readings_01.txt" />
-        <option value="$PROJECT_DIR$/Shuffler.go" />
+        <option value="$PROJECT_DIR$/test/features/Shuffling/readings_01_single_words.txt" />
+        <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" />
         <option value="$PROJECT_DIR$/ShufflerRule.go" />
+        <option value="$PROJECT_DIR$/Shuffler.go" />
+        <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" />
       </list>
     </option>
   </component>
@@ -173,7 +177,7 @@
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20840065" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20840065" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
@@ -207,24 +211,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/Shuffling/readings_01_single_words.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/Shuffling/readings_01.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="90">
+          <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+        <state relative-caret-position="285">
+          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShufflerRule.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding>
+            <element signature="e#22#56#0" expanded="true" />
+            <element signature="n#!!block;n#getFirstAlphanumericChar#0" />
+            <element signature="n#!!block;n#getLastAlphanumericChar#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Shuffler.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="94" column="9" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+        <state relative-caret-position="429">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="e#22#56#0" expanded="true" />
           </folding>
@@ -233,22 +256,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="430">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
           <folding>
             <element signature="e#19#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShufflerRule.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding>
-            <element signature="e#22#56#0" expanded="true" />
-            <element signature="n#!!block;n#getFirstAlphanumericChar#0" />
-            <element signature="n#!!block;n#getLastAlphanumericChar#0" />
           </folding>
         </state>
       </provider>

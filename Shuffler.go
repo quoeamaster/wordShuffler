@@ -36,6 +36,10 @@ func NewShuffler(location string, shuffleRule... ShuffleRule) Shuffler {
     return *m
 }
 
+func (s *Shuffler) GetShuffleText() string {
+    return s.newText
+}
+
 // shuffle the text. If no text is provided, will try to extract the text
 // from the file location WHICH might also be empty ""; if that is the case,
 // an error would be thrown
@@ -102,5 +106,5 @@ func gramsBreaking(text string) ([]string, error) {
 }
 
 func combineGramsToText(grams []string) string {
-    return strings.Join(grams, " ")
+    return strings.TrimSpace(strings.Join(grams, " "))
 }

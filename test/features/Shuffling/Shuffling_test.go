@@ -3,7 +3,9 @@ package Shuffling
 import (
     "github.com/DATA-DOG/godog"
     "wordShuffler"
+    "strings"
     "fmt"
+    "strconv"
 )
 
 // instance of shuffler
@@ -18,21 +20,31 @@ func textLocation(location string) error {
 
 // step 2
 func runAnalysis() error {
-    newText, err := shufflerInstance.ShuffleText()
+    _, err := shufflerInstance.ShuffleText()
     if err != nil {
         return err
     }
-    fmt.Println(newText)
-
     return nil
 }
 
 func getAnalyzedText() error {
-    return godog.ErrPending
+    text := shufflerInstance.GetShuffleText()
+    if len(strings.TrimSpace(text)) == 0 {
+        return fmt.Errorf("something is wrong with the shuffled text, should NOT be zero length")
+    }
+    return nil
 }
 
-func characterCountCheck(arg1 string) error {
-    return godog.ErrPending
+func characterCountCheck(countInStr string) error {
+    iCount, err := strconv.ParseInt(countInStr, 10, 32)
+    if err != nil {
+        return err
+    }
+    text := shufflerInstance.GetShuffleText()
+    if len(text) != int(iCount) {
+        return fmt.Errorf("the count check failed, expected [%v] BUT gained [%v]", iCount, len(text))
+    }
+    return nil
 }
 
 func wordMatchTest(arg1, arg2 string) error {

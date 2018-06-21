@@ -37,8 +37,7 @@ func (r *CambridgeRule) Shuffle(oldText string) (string, error) {
         " first char => ", strconv.QuoteRune(runes[idxFirstAlphanumeric]),
         " last char => ", strconv.QuoteRune(runes[idxLastAlphanumeric]))
     */
-    fmt.Println("**", oldText)
-    generateRandomCharSequence(idxFirstAlphanumeric, idxLastAlphanumeric, oldText)
+    newText = generateRandomCharSequence(idxFirstAlphanumeric, idxLastAlphanumeric, oldText)
 
     return newText, nil
 }
@@ -67,38 +66,52 @@ func getLastAlphanumericChar(charArray []rune) int {
 }
 
 func generateRandomCharSequence(idxFirst, idxLast int, oldText string) string {
-    if len(oldText) >= 0 && len(oldText) <= 3 {
-        return oldText
+    trimmedOldText := strings.TrimSpace(oldText)
+    if len(trimmedOldText) >= 0 && len(trimmedOldText) <= 3 {
+        return trimmedOldText
     }
     innerString := oldText[(idxFirst + 1): idxLast]
     charArray := []rune(innerString)
+    if len(charArray) == 1 {
+        return oldText
+    }
     destCharArray := make([]rune, len(charArray))
+    // default fill with LF (10)
+    // fillRuneArrayWithValue(&destCharArray, '\n')
+
     // generate randomizer
     rGenerator := rand.New(rand.NewSource(time.Now().UnixNano()))
+    rGenerator.Seed(time.Now().UnixNano())
 
     for idx, charInRune := range charArray {
         // get a random idx for the current rune
         // the new idx can't be the same as the original idx
         // check if the new idx already occupied or not
-        
+        newIdx := rGenerator.Intn(len(charArray))
+        for true {
+            if newIdx == idx {
+                if idx == (len(charArray) - 1) && destCharArray[idx] == 0 {
+                    break
+                }
+                newIdx = rGenerator.Intn(len(charArray))
+            } else {
+                if destCharArray[newIdx] != 0 {
+                    // fmt.Println("* need to regenerate idx => ", idx, "x", newIdx, "content =", destCharArray)
+                    newIdx = rGenerator.Intn(len(charArray))
+                } else {
+                    // fmt.Println("idx vs newIdx -", idx, "x", newIdx)
+                    break
+                }
+            }
+        }
+        destCharArray[newIdx] = charInRune
+        //fmt.Println("-> idx vs newIdx -", idx, "x", newIdx, "contents -", destCharArray)
     }
+    // newText := fmt.Sprintf("%v-%v-%v", oldText[0:(idxFirst + 1)], string(destCharArray), oldText[idxLast:])
+    // fmt.Println("bb) transformed innerstring > ", newText, " ori => ", oldText)
+    //fmt.Println(destCharArray)
+    newText := fmt.Sprintf("%v%v%v", oldText[0:(idxFirst + 1)], string(destCharArray), oldText[idxLast:])
 
-    return oldText
+    return newText
 }
 
-func isCharacterIgnorable(char string) (bool, error) {
-    isIgnorable := false
-    // is it 1 character wide?
-    if len(char) != 1 {
-        return false, fmt.Errorf("char MUST be of length of 1")
-    }
-    /*
-    switch char {
-    case "\"", "'", ",", "!", ".", " ", "\n", "\r", "“", "”":
-        isIgnorable = true
-    default:
-        isIgnorable = false
-    }
-    */
-    return isIgnorable, nil
-}
