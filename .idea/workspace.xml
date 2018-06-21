@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd594097-3e79-4926-ba42-3ff854ab3d21" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shuffler.go" beforeDir="false" afterPath="$PROJECT_DIR$/Shuffler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="readings_01.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/Shuffling/readings_01.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Shuffling.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,40 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shuffling_test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-              <folding>
-                <element signature="e#19#80#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shuffler.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shuffler.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-              <folding>
-                <element signature="e#22#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShufflerRule.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShufflerRule.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-              <folding>
-                <element signature="e#22#56#0" expanded="true" />
-                <element signature="n#!!block;n#getFirstAlphanumericChar#0" />
-                <element signature="n#!!block;n#getLastAlphanumericChar#0" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -101,6 +61,7 @@
         <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" />
         <option value="$PROJECT_DIR$/Shuffler.go" />
         <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -224,13 +185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shuffler.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -255,11 +209,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="220">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#19#80#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

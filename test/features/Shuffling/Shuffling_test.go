@@ -27,6 +27,7 @@ func runAnalysis() error {
     return nil
 }
 
+// step 3
 func getAnalyzedText() error {
     text := shufflerInstance.GetShuffleText()
     if len(strings.TrimSpace(text)) == 0 {
@@ -35,6 +36,7 @@ func getAnalyzedText() error {
     return nil
 }
 
+// step 4
 func characterCountCheck(countInStr string) error {
     iCount, err := strconv.ParseInt(countInStr, 10, 32)
     if err != nil {
@@ -47,6 +49,7 @@ func characterCountCheck(countInStr string) error {
     return nil
 }
 
+// step 5
 func wordMatchTest(idxInStr, word string) error {
     idx, err := strconv.ParseInt(idxInStr, 10, 32)
     if err != nil {
