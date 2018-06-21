@@ -59,6 +59,9 @@ func wordMatchTest(idxInStr, word string) error {
     if strings.Compare(grams[idx], word) == 0 {
         return fmt.Errorf("the word at index %v should NOT match !! [%v] vs [%v]", idx, grams[idx], word)
     }
+    // final printout
+    fmt.Println(shufflerInstance.GetShuffleText())
+
     return nil
 }
 

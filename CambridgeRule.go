@@ -7,12 +7,6 @@ import (
     "time"
 )
 
-// interface encapsulating shuffling rules
-type ShuffleRule interface {
-    // shuffle the given / old text based on its unique rules
-    Shuffle(oldText string) (string, error)
-}
-
 // rule based on the Cambridge research
 type CambridgeRule struct {}
 

@@ -14,7 +14,7 @@ Feature: Word Shuffling / Scrambling
 
     Major use cases:
     - parse the input text / passage correctly and apply the shuffling
-    - BONUS => read the text / passage by sphinx api (Carnegie Mellon University research)
+    - TODO: BONUS => read the text / passage by sphinx api (Carnegie Mellon University research)
 
     Scenario: 1) shuffling of text / passage (readings_01.txt vs readings_01_single_words.txt)
         Given a text / passage extracted from a file "readings_01.txt"
