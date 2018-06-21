@@ -20,6 +20,6 @@ Feature: Word Shuffling / Scrambling
         Given a text / passage extracted from a file "readings_01.txt"
         When the analysis has completed
         Then the shuffled text / passage could be retrieved
-        And the character count is still "708" (including the punctuation marks)
+        And the character count is still "709" (including the punctuation marks)
         And the word at index "2" doesn't equals to "department" anymore
 

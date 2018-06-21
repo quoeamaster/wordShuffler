@@ -36,8 +36,14 @@ func NewShuffler(location string, shuffleRule... ShuffleRule) Shuffler {
     return *m
 }
 
+// return the shuffled / new text
 func (s *Shuffler) GetShuffleText() string {
     return s.newText
+}
+
+// return the shuffled / new grams
+func (s *Shuffler) GetShuffleGrams() []string {
+    return s.newGrams
 }
 
 // shuffle the text. If no text is provided, will try to extract the text

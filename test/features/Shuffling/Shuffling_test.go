@@ -47,8 +47,16 @@ func characterCountCheck(countInStr string) error {
     return nil
 }
 
-func wordMatchTest(arg1, arg2 string) error {
-    return godog.ErrPending
+func wordMatchTest(idxInStr, word string) error {
+    idx, err := strconv.ParseInt(idxInStr, 10, 32)
+    if err != nil {
+        return err
+    }
+    grams := shufflerInstance.GetShuffleGrams()
+    if strings.Compare(grams[idx], word) == 0 {
+        return fmt.Errorf("the word at index %v should NOT match !! [%v] vs [%v]", idx, grams[idx], word)
+    }
+    return nil
 }
 
 func FeatureContext(s *godog.Suite) {
