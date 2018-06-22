@@ -6,6 +6,11 @@ type ShuffleRule interface {
     Shuffle(oldText string) (string, error)
 }
 
+type AdvanceSuffleRule interface {
+    // shuffle the given sequence and return a list of possible "words"
+    Shuffle(sequence string, charIdx1, charIdx2 int) ([]string, error)
+}
+
 // interface encapsulating matching rules with a "source" (e.g. dictionary)
 type MatcherRule interface {
     // method to match the given word against a "source"; could be a dictionary.

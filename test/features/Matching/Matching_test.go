@@ -15,8 +15,11 @@ func sequenceProvided(sequence string) error {
 
 // step 2
 func analyzeSequence() error {
-
-    return godog.ErrPending
+    err := instance.GenerateValidSequences()
+    if err != nil {
+        return err
+    }
+    return nil
 }
 
 func validWordsSizeCheck(sizeInStr string) error {

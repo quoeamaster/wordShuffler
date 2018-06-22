@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd594097-3e79-4926-ba42-3ff854ab3d21" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShufflerRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/CambridgeRule.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GramSequencer.go" beforeDir="false" afterPath="$PROJECT_DIR$/GramSequencer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SequenceShufflerRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/SequenceShufflerRule.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/Matching/Matching_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Matching/Matching_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Matching.feature" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Matching.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -28,8 +28,8 @@
       <file leaf-file-name="Matching_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="315">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding>
                 <element signature="e#18#70#0" expanded="true" />
               </folding>
@@ -40,17 +40,21 @@
       <file leaf-file-name="GramSequencer.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GramSequencer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="48" column="41" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="41" />
+            <state relative-caret-position="470">
+              <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SequenceShufflerRule.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SequenceShufflerRule.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SequenceShufflerRule.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="219">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="e#22#69#0" expanded="true" />
+                <element signature="n#!!block;n#getMaxChoicesSize#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,12 +98,12 @@
         <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" />
         <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" />
         <option value="$PROJECT_DIR$/ShufflerRule.go" />
-        <option value="$PROJECT_DIR$/Interfaces.go" />
         <option value="$PROJECT_DIR$/DictionaryMatcher.go" />
+        <option value="$PROJECT_DIR$/test/features/Matching/Matching.feature" />
         <option value="$PROJECT_DIR$/test/features/Matching/Matching_test.go" />
+        <option value="$PROJECT_DIR$/Interfaces.go" />
         <option value="$PROJECT_DIR$/GramSequencer.go" />
         <option value="$PROJECT_DIR$/SequenceShufflerRule.go" />
-        <option value="$PROJECT_DIR$/test/features/Matching/Matching.feature" />
       </list>
     </option>
   </component>
@@ -202,13 +206,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IOUtil.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/Shuffling/readings_01_single_words.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -254,10 +251,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/IOUtil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interfaces.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#18#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CambridgeRule.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="245">
+          <caret line="77" column="42" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="77" selection-end-column="42" />
           <folding>
             <element signature="n#!!block;n#getFirstAlphanumericChar#0" />
             <element signature="n#!!block;n#getLastAlphanumericChar#0" />
@@ -265,10 +286,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interfaces.go">
+    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+        <state relative-caret-position="465">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -279,34 +300,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#18#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GramSequencer.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="41" />
+        <state relative-caret-position="470">
+          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SequenceShufflerRule.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        <state relative-caret-position="219">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#22#69#0" expanded="true" />
+            <element signature="n#!!block;n#getMaxChoicesSize#0" />
+          </folding>
         </state>
       </provider>
     </entry>
