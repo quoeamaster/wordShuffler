@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd594097-3e79-4926-ba42-3ff854ab3d21" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DictionaryMatcher.go" beforeDir="false" afterPath="$PROJECT_DIR$/DictionaryMatcher.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GramSequencer.go" beforeDir="false" afterPath="$PROJECT_DIR$/GramSequencer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IOUtil.go" beforeDir="false" afterPath="$PROJECT_DIR$/IOUtil.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SequenceShufflerRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/SequenceShufflerRule.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/Matching/Matching.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Matching/Matching.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/Matching/Matching_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Matching/Matching_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/words_alpha.txt" beforeDir="false" afterPath="$PROJECT_DIR$/words_alpha.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Matching.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Matching.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            <state relative-caret-position="527">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -26,8 +33,8 @@
       <file leaf-file-name="Matching_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="352">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
               <folding>
                 <element signature="e#18#70#0" expanded="true" />
               </folding>
@@ -38,17 +45,20 @@
       <file leaf-file-name="GramSequencer.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GramSequencer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
+            <state relative-caret-position="215">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+              <folding>
+                <element signature="e#22#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SequenceShufflerRule.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SequenceShufflerRule.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SequenceShufflerRule.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+            <state relative-caret-position="430">
+              <caret line="115" column="18" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="18" />
               <folding>
                 <element signature="e#22#69#0" expanded="true" />
                 <element signature="n#!!block;n#getMaxChoicesSize#0" />
@@ -60,8 +70,11 @@
       <file leaf-file-name="DictionaryMatcher.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DictionaryMatcher.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="184">
+              <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+              <folding>
+                <element signature="e#22#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,6 +93,13 @@
       <find>said</find>
       <find>**</find>
       <find>handleSequenceWithLengthOf2</find>
+      <find>final</find>
+      <find>fi</find>
+      <find>SeekFileLocation</find>
+      <find>seekFileContentsByPrefix</find>
+      <find>getDictionaryEntriesByPrefix</find>
+      <find>match(</find>
+      <find>match</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
@@ -89,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IOUtil.go" />
         <option value="$PROJECT_DIR$/test/features/Shuffling/readings_01_single_words.txt" />
         <option value="$PROJECT_DIR$/test/features/Shuffling/readings_01.txt" />
         <option value="$PROJECT_DIR$/Shuffler.go" />
@@ -97,12 +116,14 @@
         <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling.feature" />
         <option value="$PROJECT_DIR$/test/features/Shuffling/Shuffling_test.go" />
         <option value="$PROJECT_DIR$/ShufflerRule.go" />
-        <option value="$PROJECT_DIR$/DictionaryMatcher.go" />
-        <option value="$PROJECT_DIR$/test/features/Matching/Matching.feature" />
-        <option value="$PROJECT_DIR$/test/features/Matching/Matching_test.go" />
-        <option value="$PROJECT_DIR$/Interfaces.go" />
-        <option value="$PROJECT_DIR$/GramSequencer.go" />
         <option value="$PROJECT_DIR$/SequenceShufflerRule.go" />
+        <option value="$PROJECT_DIR$/Interfaces.go" />
+        <option value="$PROJECT_DIR$/test/features/Matching/setEnvVar.sh" />
+        <option value="$PROJECT_DIR$/IOUtil.go" />
+        <option value="$PROJECT_DIR$/GramSequencer.go" />
+        <option value="$PROJECT_DIR$/DictionaryMatcher.go" />
+        <option value="$PROJECT_DIR$/test/features/Matching/Matching_test.go" />
+        <option value="$PROJECT_DIR$/test/features/Matching/Matching.feature" />
       </list>
     </option>
   </component>
@@ -204,6 +225,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/features/Shuffling/readings_01_single_words.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -250,30 +276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IOUtil.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Interfaces.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="e#18#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CambridgeRule.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -285,35 +287,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching.feature">
+    <entry file="file://$PROJECT_DIR$/test/features/Matching/setEnvVar.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        <state>
+          <caret selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DictionaryMatcher.go">
+    <entry file="file://$PROJECT_DIR$/IOUtil.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GramSequencer.go">
+    <entry file="file://$PROJECT_DIR$/Interfaces.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
+        <state relative-caret-position="240">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SequenceShufflerRule.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+        <state relative-caret-position="430">
+          <caret line="115" column="18" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="18" />
           <folding>
             <element signature="e#22#69#0" expanded="true" />
             <element signature="n#!!block;n#getMaxChoicesSize#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GramSequencer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#22#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DictionaryMatcher.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+          <folding>
+            <element signature="e#22#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding>
+            <element signature="e#18#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/Matching/Matching.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
         </state>
       </provider>
     </entry>

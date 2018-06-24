@@ -3,6 +3,9 @@ package Matching
 import (
     "github.com/DATA-DOG/godog"
     "wordShuffler"
+    "strconv"
+    "fmt"
+    "strings"
 )
 
 var instance wordShuffler.GramSequencer
@@ -22,12 +25,39 @@ func analyzeSequence() error {
     return nil
 }
 
+// step 3
 func validWordsSizeCheck(sizeInStr string) error {
-    return godog.ErrPending
+    iSize, err := strconv.ParseInt(sizeInStr, 10, 64)
+    if err != nil {
+        return err
+    }
+    validSeq := instance.GetValidSequences()
+    fmt.Println("valid sequences >", validSeq)
+
+    if len(validSeq) != int(iSize) {
+        return fmt.Errorf("size of the VALID sequences are not equal, expected [%v] BUT got [%v]", iSize, len(validSeq))
+    }
+    return nil
 }
 
+// step 4
 func validWordMatchCheck(_ int, targetWord string) error {
-    return godog.ErrPending
+    validSeq := instance.GetValidSequences()
+
+    if isWordFound(targetWord, validSeq) == true {
+        return nil
+    } else {
+        return fmt.Errorf("not matched~ expected [%v] BUT not found within sequences [%v]", targetWord, validSeq)
+    }
+}
+
+func isWordFound(word string, validSeq []string) bool {
+    for _, seq := range validSeq {
+        if strings.Compare(seq, word) == 0 {
+            return true
+        }
+    }
+    return false
 }
 
 func FeatureContext(s *godog.Suite) {

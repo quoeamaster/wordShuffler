@@ -1,6 +1,9 @@
 package wordShuffler
 
-import "fmt"
+import (
+    "fmt"
+    "sort"
+)
 
 type GramSequencer struct {
     // the sequence involved for "word" formation and matching later on
@@ -63,31 +66,22 @@ func (g *GramSequencer) GenerateValidSequences() error {
         g.populateValidSequenceMap(newGrams)
 
     } else {
-        // 2 chars must be picked to make the algorithm work
-        // pick the 1st char
-        /*
-        for idx1:=0; idx1 < len(g.Sequence); idx1++ {
-            ...
-        }   // end -- for (pick the "selected" char)
-        */
-        newGrams, err := g.shuffleRule.Shuffle(g.Sequence, -1, -1)
+        newGrams, err := g.shuffleRule.Shuffle(g.Sequence)
         if err != nil {
             return err
         }
         if len(newGrams) == 0 {
             return fmt.Errorf("length of the words created after the shuffle should be at least 1~ [%v]", g.Sequence)
         }
-        g.populateValidSequenceMap(newGrams)
+        err = g.populateValidSequenceMap(newGrams)
+        if err != nil {
+            return err
+        }
     }
-    // fmt.Println(newGrams)
-    fmt.Println(g.validSequences)
-
-
-
     return nil
 }
 
-func (g *GramSequencer) populateValidSequenceMap(grams []string) {
+func (g *GramSequencer) populateValidSequenceMap(grams []string) error {
     needUpdate := false
     for _, gram := range grams {
         if g.validSequences[gram] == false {
@@ -96,8 +90,26 @@ func (g *GramSequencer) populateValidSequenceMap(grams []string) {
         }
     }
     if needUpdate {
-        g.convertValidSequenceMapToArray()
+        // sorted
+        uniqueSeqArr := g.convertValidSequenceMapToArray()
+        sort.Strings(uniqueSeqArr)
+        // do matching
+        // reset the validSequencesArray first (0 length)
+        g.validSequencesArray = make([]string, 0)
+        if uniqueSeqArr != nil {
+            for _, seq := range uniqueSeqArr {
+                bMatched, err := g.matcherRule.MatchWord(seq)
+
+                if err != nil {
+                    return err
+                }
+                if bMatched == true {
+                    g.validSequencesArray = append(g.validSequencesArray, seq)
+                }
+            }   // end -- for (per entry within uniqueSeqArr)
+        }   // end -- if (uniqueSeqArr VALID)
     }
+    return nil
 }
 
 func (g *GramSequencer) convertValidSequenceMapToArray() []string {

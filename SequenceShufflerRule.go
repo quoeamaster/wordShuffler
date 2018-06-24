@@ -43,7 +43,7 @@ func NewSequenceShufflerRule(minSize, maxSize int, sequence string) SequenceShuf
 
 // implementation of the ShuffleRule; however the returned string value
 // is not meaningful in here. Instead should invoke "GetValidSequences" method
-func (s *SequenceShufflerRule) Shuffle(sequence string, _, _ int) ([]string, error) {
+func (s *SequenceShufflerRule) Shuffle(sequence string, optionalArgs... map[string]interface{}) ([]string, error) {
     // fmt.Println(sequence, " idx1 ", charIdx1, ", idx2 ", charIdx2)
     // key => string seq of the runes; value => true / false (default is false)
     runeSeqMap := make(map[string]bool)

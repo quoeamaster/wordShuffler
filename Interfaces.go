@@ -8,7 +8,7 @@ type ShuffleRule interface {
 
 type AdvanceSuffleRule interface {
     // shuffle the given sequence and return a list of possible "words"
-    Shuffle(sequence string, charIdx1, charIdx2 int) ([]string, error)
+    Shuffle(sequence string, optionalArgs... map[string]interface{}) ([]string, error)
 }
 
 // interface encapsulating matching rules with a "source" (e.g. dictionary)

@@ -27,8 +27,20 @@ Feature: Word Matching (with dictionary reference)
 
         Given a sequence "odme"
         When the analysis has completed
-        Then a list of matched valid words of size "2" should be retrieved
+        Then a list of matched valid words of size "4" should be retrieved
         And 1 of the matched words should be "dome"
         And 1 of the matched words should be "demo"
 
+    Scenario: 2) matching a valid sequence (length of 5)
 
+        Given a sequence "cpsir"
+        When the analysis has completed
+        Then a list of matched valid words of size "3" should be retrieved
+        And 1 of the matched words should be "crisp"
+
+    Scenario: 3) matching a valid sequence (length of PLUS double characters)
+
+        Given a sequence "phapy"
+        When the analysis has completed
+        Then a list of matched valid words of size "1" should be retrieved
+        And 1 of the matched words should be "happy"
