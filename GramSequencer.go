@@ -65,16 +65,19 @@ func (g *GramSequencer) GenerateValidSequences() error {
     } else {
         // 2 chars must be picked to make the algorithm work
         // pick the 1st char
+        /*
         for idx1:=0; idx1 < len(g.Sequence); idx1++ {
-            newGrams, err := g.shuffleRule.Shuffle(g.Sequence, idx1, -1)
-            if err != nil {
-                return err
-            }
-            if len(newGrams) == 0 {
-                return fmt.Errorf("length of the words created after the shuffle should be at least 1~ [%v]", g.Sequence)
-            }
-            g.populateValidSequenceMap(newGrams)
+            ...
         }   // end -- for (pick the "selected" char)
+        */
+        newGrams, err := g.shuffleRule.Shuffle(g.Sequence, -1, -1)
+        if err != nil {
+            return err
+        }
+        if len(newGrams) == 0 {
+            return fmt.Errorf("length of the words created after the shuffle should be at least 1~ [%v]", g.Sequence)
+        }
+        g.populateValidSequenceMap(newGrams)
     }
     // fmt.Println(newGrams)
     fmt.Println(g.validSequences)

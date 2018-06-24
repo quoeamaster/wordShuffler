@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd594097-3e79-4926-ba42-3ff854ab3d21" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/GramSequencer.go" beforeDir="false" afterPath="$PROJECT_DIR$/GramSequencer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SequenceShufflerRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/SequenceShufflerRule.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/Matching/Matching_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/Matching/Matching_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="GramSequencer.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GramSequencer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+            <state relative-caret-position="282">
+              <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -49,8 +47,8 @@
       <file leaf-file-name="SequenceShufflerRule.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SequenceShufflerRule.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="509">
+              <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
               <folding>
                 <element signature="e#22#69#0" expanded="true" />
                 <element signature="n#!!block;n#getMaxChoicesSize#0" />
@@ -81,6 +79,7 @@
     <findStrings>
       <find>said</find>
       <find>**</find>
+      <find>handleSequenceWithLengthOf2</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
@@ -302,15 +301,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GramSequencer.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+        <state relative-caret-position="282">
+          <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SequenceShufflerRule.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="509">
+          <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
           <folding>
             <element signature="e#22#69#0" expanded="true" />
             <element signature="n#!!block;n#getMaxChoicesSize#0" />

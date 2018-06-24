@@ -1,7 +1,6 @@
 package wordShuffler
 
 import (
-    "fmt"
     "math/rand"
     "time"
 )
@@ -44,36 +43,28 @@ func NewSequenceShufflerRule(minSize, maxSize int, sequence string) SequenceShuf
 
 // implementation of the ShuffleRule; however the returned string value
 // is not meaningful in here. Instead should invoke "GetValidSequences" method
-func (s *SequenceShufflerRule) Shuffle(sequence string, charIdx1, charIdx2 int) ([]string, error) {
-    fmt.Println(sequence, " idx1 ", charIdx1, ", idx2 ", charIdx2)
+func (s *SequenceShufflerRule) Shuffle(sequence string, _, _ int) ([]string, error) {
+    // fmt.Println(sequence, " idx1 ", charIdx1, ", idx2 ", charIdx2)
     // key => string seq of the runes; value => true / false (default is false)
     runeSeqMap := make(map[string]bool)
     oldCharArray := []rune(s.sequence)
 
-    maxSeqSize := getMaxChoicesSize(len(oldCharArray) - 1)
+    maxSeqSize := getMaxChoicesSize(len(oldCharArray)) // - 1
     rGenerator := rand.New(rand.NewSource(time.Now().UnixNano()))
     rGenerator.Seed(time.Now().UnixNano())
-    // fmt.Println("bb > max seq =", maxSeqSize, " oldcharArray length >", len(oldCharArray))
 
     // get all the possible word combos (maxSeqSize)
     for i := 0; i < maxSeqSize; i++ {
         newCharArray := make([]rune, len(oldCharArray))
-        // set the 2 chosen chars values
-        newCharArray[charIdx1] = oldCharArray[charIdx1]
 
         for true {
             // records down which rune has been used...
             seqMapEntry := make(map[int]bool, len(oldCharArray))
-            seqMapEntry[charIdx1] = true
 
             for j := range oldCharArray {
                 currentChar := oldCharArray[j]
-                if j == charIdx1 {
-                    continue
-                }
                 randIdx := s.GetValidRandomIdx(j, len(oldCharArray), &seqMapEntry, rGenerator)
                 newCharArray[randIdx] = currentChar
-                // fmt.Println(randIdx, " =>", string(newCharArray), newCharArray)
             }   // end -- for (per rune of the oldCharArray)
             newWord := string(newCharArray)
             // fmt.Println("b1) "+newWord)
@@ -90,7 +81,7 @@ func (s *SequenceShufflerRule) Shuffle(sequence string, charIdx1, charIdx2 int) 
     for key := range runeSeqMap {
         wordArray = append(wordArray, key)
     }
-fmt.Println("cc)", wordArray)
+    // fmt.Println("cc)", wordArray)
     return wordArray, nil
 }
 
@@ -119,10 +110,7 @@ func (s *SequenceShufflerRule) GetValidRandomIdx(
     return randIdx
 }
 
-func (s *SequenceShufflerRule) handleSequenceWithLengthOf2() error {
 
-    return nil
-}
 
 /*
 // method to match the given word against a "source"; could be a dictionary.
