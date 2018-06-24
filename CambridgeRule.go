@@ -24,13 +24,6 @@ func (r *CambridgeRule) Shuffle(oldText string) (string, error) {
     if idxLastAlphanumeric == -1 || idxLastAlphanumeric == -1 {
         return "", fmt.Errorf("the word provided doen't contain any alphanumeric characters [%v]", oldText)
     }
-    /*
-    fmt.Println("first char @", idxFirstAlphanumeric,
-        " last char @", idxLastAlphanumeric,
-        " actual word => ", oldText,
-        " first char => ", strconv.QuoteRune(runes[idxFirstAlphanumeric]),
-        " last char => ", strconv.QuoteRune(runes[idxLastAlphanumeric]))
-    */
     newText = generateRandomCharSequence(idxFirstAlphanumeric, idxLastAlphanumeric, oldText)
 
     return newText, nil
@@ -70,8 +63,6 @@ func generateRandomCharSequence(idxFirst, idxLast int, oldText string) string {
         return oldText
     }
     destCharArray := make([]rune, len(charArray))
-    // default fill with LF (10)
-    // fillRuneArrayWithValue(&destCharArray, '\n')
 
     // generate randomizer
     rGenerator := rand.New(rand.NewSource(time.Now().UnixNano()))
@@ -90,20 +81,14 @@ func generateRandomCharSequence(idxFirst, idxLast int, oldText string) string {
                 newIdx = rGenerator.Intn(len(charArray))
             } else {
                 if destCharArray[newIdx] != 0 {
-                    // fmt.Println("* need to regenerate idx => ", idx, "x", newIdx, "content =", destCharArray)
                     newIdx = rGenerator.Intn(len(charArray))
                 } else {
-                    // fmt.Println("idx vs newIdx -", idx, "x", newIdx)
                     break
                 }
             }
         }
         destCharArray[newIdx] = charInRune
-        //fmt.Println("-> idx vs newIdx -", idx, "x", newIdx, "contents -", destCharArray)
     }
-    // newText := fmt.Sprintf("%v-%v-%v", oldText[0:(idxFirst + 1)], string(destCharArray), oldText[idxLast:])
-    // fmt.Println("bb) transformed innerstring > ", newText, " ori => ", oldText)
-    //fmt.Println(destCharArray)
     newText := fmt.Sprintf("%v%v%v", oldText[0:(idxFirst + 1)], string(destCharArray), oldText[idxLast:])
 
     return newText

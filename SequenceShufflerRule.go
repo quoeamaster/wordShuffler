@@ -1,9 +1,5 @@
 package wordShuffler
 
-import (
-    "math/rand"
-)
-
 type SequenceShufflerRule struct {
     // the minimum size of the "words" to be created from the given sequence.
     // Theoretically it should be at least "2"
@@ -58,44 +54,16 @@ func join(ins []rune, c rune) (result []string) {
 }
 
 // perform permutation based on the given charArray
-func recursivePermute(word []rune, p []string) []string {
+func recursivePermute(word []rune, permutationResult []string) []string {
     if len(word) == 0 {
-        return p
+        return permutationResult
     } else {
         result := make([]string, 0)
-        for _, e := range p {
+        for _, e := range permutationResult {
             result = append(result, join([]rune(e), word[0])...)
         }
         return recursivePermute(word[1:], result)
     }
 }
 
-
-// get the max size for the sequence...
-func getMaxChoicesSize(gram []rune, gramLength int) int {
-    // handling on duplicated characters (dup char would reduce
-    // possible sequences - which makes the seq creation loop non-breakable)
-    if gramLength == 1 {
-        return 1
-    }
-    return gramLength * getMaxChoicesSize(gram, gramLength - 1)
-}
-
-
-func (s *SequenceShufflerRule) GetValidRandomIdx(
-    targetIdx, oldCharArraySize int, seqMap *map[int]bool, rGenerator *rand.Rand) int {
-
-    // randomly set the other runes
-    randIdx := rGenerator.Intn(oldCharArraySize)
-    for true {
-        // non occupied entry
-        if (*seqMap)[randIdx] == false {
-            (*seqMap)[randIdx] = true
-            break
-        } else {
-            randIdx = rGenerator.Intn(oldCharArraySize)
-        }
-    }
-    return randIdx
-}
 
