@@ -49,7 +49,10 @@ func (s *SequenceShufflerRule) Shuffle(sequence string, optionalArgs... map[stri
     runeSeqMap := make(map[string]bool)
     oldCharArray := []rune(s.sequence)
 
-    maxSeqSize := getMaxChoicesSize(len(oldCharArray)) // - 1
+    // TODO: reference to the permutation algorithm from
+    // https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/
+
+    maxSeqSize := getMaxChoicesSize(oldCharArray, len(oldCharArray))
     rGenerator := rand.New(rand.NewSource(time.Now().UnixNano()))
     rGenerator.Seed(time.Now().UnixNano())
 
@@ -67,7 +70,7 @@ func (s *SequenceShufflerRule) Shuffle(sequence string, optionalArgs... map[stri
                 newCharArray[randIdx] = currentChar
             }   // end -- for (per rune of the oldCharArray)
             newWord := string(newCharArray)
-            // fmt.Println("b1) "+newWord)
+
             if runeSeqMap[newWord] == true {
                 continue
             }
@@ -86,12 +89,18 @@ func (s *SequenceShufflerRule) Shuffle(sequence string, optionalArgs... map[stri
 }
 
 // get the max size for the sequence...
-func getMaxChoicesSize(gramLength int) int {
+func getMaxChoicesSize(gram []rune, gramLength int) int {
+    // handling on duplicated characters (dup char would reduce
+    // possible sequences - which makes the seq creation loop non-breakable)
+
+
+
     if gramLength == 1 {
         return 1
     }
-    return gramLength * getMaxChoicesSize(gramLength - 1)
+    return gramLength * getMaxChoicesSize(gram, gramLength - 1)
 }
+
 
 func (s *SequenceShufflerRule) GetValidRandomIdx(
     targetIdx, oldCharArraySize int, seqMap *map[int]bool, rGenerator *rand.Rand) int {
@@ -110,12 +119,3 @@ func (s *SequenceShufflerRule) GetValidRandomIdx(
     return randIdx
 }
 
-
-
-/*
-// method to match the given word against a "source"; could be a dictionary.
-func (s *SequenceShufflerRule) MatchWord(word string) (bool, error) {
-
-    return false, nil
-}
-*/

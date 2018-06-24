@@ -43,7 +43,6 @@ func validWordsSizeCheck(sizeInStr string) error {
 // step 4
 func validWordMatchCheck(_ int, targetWord string) error {
     validSeq := instance.GetValidSequences()
-
     if isWordFound(targetWord, validSeq) == true {
         return nil
     } else {
