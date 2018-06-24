@@ -22,6 +22,13 @@ Feature: Word Matching (with dictionary reference)
     Major use cases:
     - parse the input sequence and start digging valid "words"
 
+    Scenario: 1) matching a valid sequence (length of PLUS double characters)
+
+        Given a sequence "pap"
+        When the analysis has completed
+        Then a list of matched valid words of size "3" should be retrieved
+        And 1 of the matched words should be "app"
+
     Scenario: 2) matching a valid sequence
         (valid here means the sequence members could form at least 1 valid word)
 
@@ -30,13 +37,6 @@ Feature: Word Matching (with dictionary reference)
         Then a list of matched valid words of size "4" should be retrieved
         And 1 of the matched words should be "dome"
         And 1 of the matched words should be "demo"
-
-    Scenario: 1) matching a valid sequence (length of PLUS double characters)
-
-        Given a sequence "pap"
-        When the analysis has completed
-        Then a list of matched valid words of size "1" should be retrieved
-        And 1 of the matched words should be "app"
 
     Scenario: 3) matching a valid sequence (length of 5)
 
@@ -51,3 +51,18 @@ Feature: Word Matching (with dictionary reference)
         When the analysis has completed
         Then a list of matched valid words of size "1" should be retrieved
         And 1 of the matched words should be "happy"
+
+    Scenario: 5) matching a valid sequence (length of PLUS triple characters)
+
+        Given a sequence "banana"
+        When the analysis has completed
+        Then a list of matched valid words of size "1" should be retrieved
+        And 1 of the matched words should be "banana"
+
+    Scenario: 6) matching a valid sequence (length of PLUS double characters)
+
+        Given a sequence "anspe"
+        When the analysis has completed
+        Then a list of matched valid words of size "10" should be retrieved
+        And 1 of the matched words should be "panse"
+        And 1 of the matched words should be "peans"

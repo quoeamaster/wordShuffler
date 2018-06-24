@@ -51,6 +51,8 @@ func NewGramSequencerSimple(sequence string) GramSequencer {
     return NewGramSequencer(sequence, -1, -1, nil, nil)
 }
 
+// method to generate "valid" sequences created from the given sequence.
+// Valid or not depends on the implementation of the Matcher
 func (g *GramSequencer) GenerateValidSequences() error {
     var newGrams []string
 
@@ -81,6 +83,8 @@ func (g *GramSequencer) GenerateValidSequences() error {
     return nil
 }
 
+// populate a map from the given words slice / array; de-duplication logic
+// applied as well.
 func (g *GramSequencer) populateValidSequenceMap(grams []string) error {
     needUpdate := false
     for _, gram := range grams {
@@ -112,6 +116,7 @@ func (g *GramSequencer) populateValidSequenceMap(grams []string) error {
     return nil
 }
 
+// convert a map back to a string slice / array
 func (g *GramSequencer) convertValidSequenceMapToArray() []string {
     arr := make([]string, 0)
 
@@ -121,6 +126,7 @@ func (g *GramSequencer) convertValidSequenceMapToArray() []string {
     return arr
 }
 
+// simple getter
 func (g *GramSequencer) GetValidSequences() []string {
     return g.validSequencesArray
 }

@@ -2,7 +2,6 @@ package wordShuffler
 
 import (
     "math/rand"
-    "time"
 )
 
 type SequenceShufflerRule struct {
@@ -44,57 +43,38 @@ func NewSequenceShufflerRule(minSize, maxSize int, sequence string) SequenceShuf
 // implementation of the ShuffleRule; however the returned string value
 // is not meaningful in here. Instead should invoke "GetValidSequences" method
 func (s *SequenceShufflerRule) Shuffle(sequence string, optionalArgs... map[string]interface{}) ([]string, error) {
-    // fmt.Println(sequence, " idx1 ", charIdx1, ", idx2 ", charIdx2)
-    // key => string seq of the runes; value => true / false (default is false)
-    runeSeqMap := make(map[string]bool)
-    oldCharArray := []rune(s.sequence)
-
-    // TODO: reference to the permutation algorithm from
-    // https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/
-
-    maxSeqSize := getMaxChoicesSize(oldCharArray, len(oldCharArray))
-    rGenerator := rand.New(rand.NewSource(time.Now().UnixNano()))
-    rGenerator.Seed(time.Now().UnixNano())
-
-    // get all the possible word combos (maxSeqSize)
-    for i := 0; i < maxSeqSize; i++ {
-        newCharArray := make([]rune, len(oldCharArray))
-
-        for true {
-            // records down which rune has been used...
-            seqMapEntry := make(map[int]bool, len(oldCharArray))
-
-            for j := range oldCharArray {
-                currentChar := oldCharArray[j]
-                randIdx := s.GetValidRandomIdx(j, len(oldCharArray), &seqMapEntry, rGenerator)
-                newCharArray[randIdx] = currentChar
-            }   // end -- for (per rune of the oldCharArray)
-            newWord := string(newCharArray)
-
-            if runeSeqMap[newWord] == true {
-                continue
-            }
-            runeSeqMap[newWord] = true
-            break
-        }
-    }   // end -- for (max seq for a particular word length)
-
-    // translate map back to []string
-    wordArray := make([]string, 0)
-    for key := range runeSeqMap {
-        wordArray = append(wordArray, key)
-    }
-    // fmt.Println("cc)", wordArray)
-    return wordArray, nil
+    oldCharArray := []rune(sequence)
+    return recursivePermute(oldCharArray[1:], []string{ string(oldCharArray[0]) }), nil
 }
+
+// method referenced from http://www.golangprograms.com/golang-program-to-print-all-permutations-of-a-given-string.html
+
+// joining the given runes
+func join(ins []rune, c rune) (result []string) {
+    for i := 0; i <= len(ins); i++ {
+        result = append(result, string(ins[:i])+string(c)+string(ins[i:]))
+    }
+    return
+}
+
+// perform permutation based on the given charArray
+func recursivePermute(word []rune, p []string) []string {
+    if len(word) == 0 {
+        return p
+    } else {
+        result := make([]string, 0)
+        for _, e := range p {
+            result = append(result, join([]rune(e), word[0])...)
+        }
+        return recursivePermute(word[1:], result)
+    }
+}
+
 
 // get the max size for the sequence...
 func getMaxChoicesSize(gram []rune, gramLength int) int {
     // handling on duplicated characters (dup char would reduce
     // possible sequences - which makes the seq creation loop non-breakable)
-
-
-
     if gramLength == 1 {
         return 1
     }
