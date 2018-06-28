@@ -11,9 +11,21 @@
   revision = "0371765570d36374bef4ab9f62ed0491f0862a3c"
   version = "v0.7.6"
 
+[[projects]]
+  name = "github.com/Jeffail/gabs"
+  packages = ["."]
+  revision = "7a0fed31069aba77993a518cc2f37b28ee7aa883"
+  version = "1.1"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/golang/groupcache"
+  packages = ["lru"]
+  revision = "24b0969c4cb722950103eed87108c8d291a8df00"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "fb861b929247d8205fef7344b50f2f21354b5a3720694dfcb94e4cac0cc09981"
+  inputs-digest = "35d30dbc5b28fbec438dd60fdc7960a8ad54731a7ee24c08caf679613011f6e1"
   solver-name = "gps-cdcl"
   solver-version = 1
