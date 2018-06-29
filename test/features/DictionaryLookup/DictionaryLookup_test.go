@@ -65,6 +65,15 @@ func validateExplanations(wordsInString string) error {
     }
 }
 
+func explanationMightMatch(wordList string) error {
+    // could be empty as slang or contemporary words are not always available
+    if results == nil || len(results) == 0 {
+        return nil
+    } else {
+        return validateExplanations(wordList)
+    }
+}
+
 // **   scenario 2  **
 
 // step 3
@@ -79,6 +88,9 @@ func validateNoExplanation() error {
 func FeatureContext(s *godog.Suite) {
     s.Step(`^a word "([^"]*)"$`, targetWord)
     s.Step(`^calling the dictionary api\(s\), the corresponding explanation is retrieved$`, doLookup)
+
+    s.Step(`^the explanation MIGHT contain words like "([^"]*)"$`, explanationMightMatch)
+
     s.Step(`^the explanation should contain words like "([^"]*)"$`, validateExplanations)
 
     s.Step(`^no explanation should be available$`, validateNoExplanation)

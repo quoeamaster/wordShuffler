@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd594097-3e79-4926-ba42-3ff854ab3d21" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/DictLookupEngineGlosbe.go" beforeDir="false" afterPath="$PROJECT_DIR$/DictLookupEngineGlosbe.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DictLookupEnginePearson.go" beforeDir="false" afterPath="$PROJECT_DIR$/DictLookupEnginePearson.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DictionaryLookup.go" beforeDir="false" afterPath="$PROJECT_DIR$/DictionaryLookup.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup_test.go" afterDir="false" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="DictionaryLookup_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="50" column="81" selection-start-line="50" selection-start-column="81" selection-end-line="50" selection-end-column="81" />
+            <state relative-caret-position="403">
+              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding>
                 <element signature="e#26#87#0" expanded="true" />
               </folding>
@@ -31,31 +32,19 @@
       <file leaf-file-name="DictionaryLookup.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="270">
+              <caret line="18" column="74" lean-forward="true" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DictionaryLookup.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DictionaryLookup.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DictionaryLookup.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="145">
+              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
               <folding>
                 <element signature="e#22#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DictLookupEngineGlosbe.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DictLookupEngineGlosbe.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-              <folding>
-                <element signature="e#22#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,10 +53,19 @@
       <file leaf-file-name="DictLookupEnginePearson.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DictLookupEnginePearson.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="963">
-              <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
+            <state relative-caret-position="220">
+              <caret line="101" column="32" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictLookupEngineGlosbe.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DictLookupEngineGlosbe.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
               <folding>
-                <element signature="e#22#72#0" expanded="true" />
+                <element signature="e#22#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,6 +95,8 @@
       <find>GetValidRandomIdx</find>
       <find>getValid</find>
       <find>fmt.</find>
+      <find>fmt.Pr</find>
+      <find>fmt.pr</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
@@ -124,11 +124,11 @@
         <option value="$PROJECT_DIR$/GramSequencer.go" />
         <option value="$PROJECT_DIR$/JsonUtil.go" />
         <option value="$PROJECT_DIR$/HttpUtil.go" />
-        <option value="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup_test.go" />
-        <option value="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup.feature" />
-        <option value="$PROJECT_DIR$/DictionaryLookup.go" />
-        <option value="$PROJECT_DIR$/DictLookupEnginePearson.go" />
         <option value="$PROJECT_DIR$/DictLookupEngineGlosbe.go" />
+        <option value="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup.feature" />
+        <option value="$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup_test.go" />
+        <option value="$PROJECT_DIR$/DictLookupEnginePearson.go" />
+        <option value="$PROJECT_DIR$/DictionaryLookup.go" />
       </list>
     </option>
   </component>
@@ -382,49 +382,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DictLookupEngineGlosbe.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="116" column="9" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+          <folding>
+            <element signature="e#22#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="50" column="81" selection-start-line="50" selection-start-column="81" selection-end-line="50" selection-end-column="81" />
+        <state relative-caret-position="403">
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
             <element signature="e#26#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DictLookupEnginePearson.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/DictionaryLookup/DictionaryLookup.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="270">
+          <caret line="18" column="74" lean-forward="true" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DictionaryLookup.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="145">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
           <folding>
             <element signature="e#22#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DictLookupEnginePearson.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="963">
-          <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
-          <folding>
-            <element signature="e#22#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DictLookupEngineGlosbe.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding>
-            <element signature="e#22#56#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -96,32 +96,24 @@ func (d *DLGlosbe) prepareDictionaryLookupResult(list []*gabs.Container) ([]Dict
 
     finalList := make([]DictionaryLookupResult, 0)
     for _, result := range list {
-        // get the current value (interface{}) of the result
-        // TODO: use sub-clause to search instead of this pile of mess... (too many type casting)
-        resultValue := result.Data()
+        meanings := result.Search("meanings")
+        if meanings == nil {
+            // some might not contain any explanations at all
+            continue
+        }
+        meaningsList, err := meanings.Children()
+        if err != nil {
+            return nil, fmt.Errorf("could not get the meanings")
+        }
+        for _, meaning := range meaningsList {
+            switch meaning.Data().(type) {
+            case map[string]interface{}:
+                vMap := meaning.Data().(map[string]interface{})
+                finalList = append(finalList, NewDictionaryLookupResult(vMap["text"].(string), vMap["language"].(string)))
 
-        switch resultValue.(type) {
-        case map[string]interface{}:
-            meaningsClause := resultValue.(map[string]interface{})["meanings"]
-            // sometimes the clauses inside "tuc" might not contain "meanings"
-            if meaningsClause == nil {
-                continue
+            default:
+                return nil, fmt.Errorf("non support type met [%v]", meaning.Data())
             }
-            // should be []interface{} (wiki-dictionary)
-            vList := (resultValue.(map[string]interface{})["meanings"]).([]interface{})
-            for _, result2 := range vList {
-                switch result2.(type) {
-                case map[string]interface{}:
-                    vMap := result2.(map[string]interface{})
-                    dictResult := NewDictionaryLookupResult(vMap["text"].(string), vMap["language"].(string))
-                    finalList = append(finalList, dictResult)
-
-                default:
-                    return nil, fmt.Errorf("non supported result data type for MEANING(s) found [%v]", result2)
-                }
-            }   // end -- for (the "meaning" list)
-        default:
-            return nil, fmt.Errorf("non supported result data type found [%v]", resultValue)
         }
     }   // end -- for (iteration from the given list, not yet reached the "meaning" clause yet)
     return finalList, nil

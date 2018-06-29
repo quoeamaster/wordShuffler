@@ -16,7 +16,7 @@ Feature: Dictionary lookup
     Scenario: 1) find explanation based on a word (slang or contemporary words)
         Given a word "hangry"
         When calling the dictionary api(s), the corresponding explanation is retrieved
-        And the explanation should contain words like "angry,hungry,hunger"
+        And the explanation MIGHT contain words like "angry,hungry,hunger"
 
     Scenario: 2) find explanation based on a NON existing word
         Given a word "roda"

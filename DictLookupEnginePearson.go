@@ -99,7 +99,7 @@ func (d *DLPearson) prepareDictionaryLookupResults(list []*gabs.Container) ([]Di
                     switch firstDef.(type) {
                     case []interface{}:
                         vList := firstDef.([]interface{})
-                        fmt.Println(vList)
+                        //fmt.Println(vList)
                         results = append(results, NewDictionaryLookupResult(vList[0].(string), "eng"))
                     case string:
                         results = append(results, NewDictionaryLookupResult(firstDef.(string), "eng"))

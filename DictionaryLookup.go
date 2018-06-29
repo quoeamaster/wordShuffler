@@ -44,9 +44,8 @@ func NewDictionaryLookup(cacheSize... int) *DictionaryLookup {
 
     // TODO: populate the lookupCache contents
     m.lookupSources = make([]DictionaryLookupEngine, 0)
-
-    m.lookupSources = append(m.lookupSources, NewPearsonEngine())
     m.lookupSources = append(m.lookupSources, NewGlosbeEngine())
+    m.lookupSources = append(m.lookupSources, NewPearsonEngine())
 
     return m
 }
