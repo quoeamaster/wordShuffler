@@ -17,7 +17,18 @@ type DictionaryLookup struct {
 }
 
 type DictionaryLookupResult struct {
+    Text string
+    Language string
+}
 
+// return a new instance of the lookup result
+func NewDictionaryLookupResult(text, lang string) DictionaryLookupResult {
+    m := new(DictionaryLookupResult)
+
+    m.Text = text
+    m.Language = lang
+
+    return *m
 }
 
 // create a new instance of DictionaryLookup with an optional cache size;
@@ -33,7 +44,9 @@ func NewDictionaryLookup(cacheSize... int) *DictionaryLookup {
 
     // TODO: populate the lookupCache contents
     m.lookupSources = make([]DictionaryLookupEngine, 0)
-    m.lookupSources = append(m.lookupSources, NewEngine())
+
+    m.lookupSources = append(m.lookupSources, NewPearsonEngine())
+    m.lookupSources = append(m.lookupSources, NewGlosbeEngine())
 
     return m
 }
@@ -58,10 +71,3 @@ func IsWordValid(word string) bool {
     return true
 }
 
-// handy method to check if the optional params is valid or not
-func IsOptionalParamsValid(params... map[string]interface{}) bool {
-    if params != nil && len(params) > 0 {
-        return true
-    }
-    return false
-}

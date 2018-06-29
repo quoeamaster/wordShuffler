@@ -13,8 +13,18 @@ Feature: Dictionary lookup
     - find explanations of the words by querying the api (1 of them at least)
     - TODO: read / pronounce the words
 
-    Scenario: 1) find explanation based on a word
+    Scenario: 1) find explanation based on a word (slang or contemporary words)
         Given a word "hangry"
         When calling the dictionary api(s), the corresponding explanation is retrieved
         And the explanation should contain words like "angry,hungry,hunger"
+
+    Scenario: 2) find explanation based on a NON existing word
+        Given a word "roda"
+        When calling the dictionary api(s), the corresponding explanation is retrieved
+        And no explanation should be available
+
+    Scenario: 3) find explanation based on a normal word (non slang)
+        Given a word "cock"
+        When calling the dictionary api(s), the corresponding explanation is retrieved
+        And the explanation should contain words like "penis,chicken,male"
 
